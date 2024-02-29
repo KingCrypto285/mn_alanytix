@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import BlogSection from "../Pages/BlogSection";
 import "../App.css";
+import VerticalBreak from "./VerticalBreak";
+
 
 const Navbar = () => {
 
@@ -25,6 +27,7 @@ const Navbar = () => {
               <li>
                 <NavLink to="/">Home</NavLink>
               </li>
+              
               <li>
                 <NavLink to="/BlogSection" component={BlogSection}>Blog</NavLink>
               </li>
