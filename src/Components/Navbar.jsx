@@ -1,9 +1,13 @@
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink,Link  } from "react-router-dom";
 import BlogSection from "../Pages/BlogSection";
 import "../App.css";
 import VerticalBreak from "./VerticalBreak";
-
+import Home from '../Pages/HomePage';
+import ReportSection from "../Pages/ReportSection";
+import ProjectSection from "../Pages/ProjectSection";
+import About from "../Pages/About";
+import Contact from "../Pages/Contact";
 
 const Navbar = () => {
 
@@ -19,26 +23,24 @@ const Navbar = () => {
         <nav className="navbar">
         <div className="container">
           <div>
-          <h3>Analytixs</h3>
+          <Link to="/" className="heading-link">Analytixs NZ</Link>
           </div>
           <div className="nav-elements">
-            
             <ul>
               <li>
-                <NavLink to="/">Home</NavLink>
+                <NavLink to="/" component={Home}>Home</NavLink>
               </li>
-              
               <li>
                 <NavLink to="/BlogSection" component={BlogSection}>Blog</NavLink>
               </li>
               <li>
-                <NavLink to="/ProjectSection">Projects</NavLink>
+                <NavLink to="/ProjectSection" component={ProjectSection}>Projects</NavLink>
               </li>
               <li>
-                <NavLink to="/Reports">Reports</NavLink>
+                <NavLink to="/ReportSection" component={ReportSection}>Reports</NavLink>
               </li>
               <li>
-                <NavLink to="/about">About</NavLink>
+                <NavLink to="/About" component={About}>About</NavLink>
               </li>
               <li>
                 <NavLink to="/contact">Contact</NavLink>

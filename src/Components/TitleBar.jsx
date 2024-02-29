@@ -5,40 +5,47 @@ import { render } from '@testing-library/react';
 
 
 
-const TitleBar = ({title,type}) => {
-    render();
+const TitleBar = ({title,type,onClick }) => {
+
     return(
-        <TitleBarBlock>
-            <h2 className={type}>{title}</h2>
-        </TitleBarBlock>
+      <TitleBarBlock  onClick={onClick } > <h2 className={type}>{title}</h2></TitleBarBlock>
     );
 
 }
 
 const TitleBarBlock = styled.div`
-font-family: Poppins, sans-serif;
+font-family: Georgia;
 margin-top: 2rem;
 
 width: 80%;
 gap: 16px;
 padding-top: 25px;
 margin: 0 auto;
+border-bottom: 3px solid black; 
 
-h2 {
-  text-align: center; 
-  border-bottom: 3px solid black; 
-  padding-bottom: 8px;
-  width: 50%; 
-  margin: 0 auto; 
-}
+
+
+
+
 
 .main{
   font-size: 75px;
+  text-align:left;
 }
 .sub{
   font-size: 50px;
+  text-align:center;
 }
-`;
+
+.tiny{
+  font-size: 25px;
+  text-align:left;
+}
+
+`
+;
+
+
 
 
 export default TitleBar;

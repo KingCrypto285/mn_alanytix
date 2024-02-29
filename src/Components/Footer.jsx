@@ -24,7 +24,9 @@ const BottomBar = styled.div`
     position: fixed; 
     bottom: 0;
     color: #ffffff;
-    background-color: #000000 ;
+    background-color: #E07A5F ;
+    
+
 `
 
 const VerticalBreak = styled.div`
