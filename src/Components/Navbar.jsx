@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
-import '../navbar.css'
+import BlogSection from "../Pages/BlogSection";
+import "../App.css";
 
 const Navbar = () => {
 
@@ -25,10 +26,13 @@ const Navbar = () => {
                 <NavLink to="/">Home</NavLink>
               </li>
               <li>
-                <NavLink to="/blog">Blog</NavLink>
+                <NavLink to="/BlogSection" component={BlogSection}>Blog</NavLink>
               </li>
               <li>
-                <NavLink to="/projects">Projects</NavLink>
+                <NavLink to="/ProjectSection">Projects</NavLink>
+              </li>
+              <li>
+                <NavLink to="/Reports">Reports</NavLink>
               </li>
               <li>
                 <NavLink to="/about">About</NavLink>

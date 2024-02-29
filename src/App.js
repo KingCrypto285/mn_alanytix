@@ -8,9 +8,11 @@ class App extends Component {
   render() {
     return(
       <BrowserRouter>
-          <Navbar/>
+        <Pages />
       </BrowserRouter>
   );}
 }
 
 export default App;
+
+{/* <Navbar/> */}
