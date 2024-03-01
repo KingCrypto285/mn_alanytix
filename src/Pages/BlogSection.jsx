@@ -7,8 +7,8 @@ import Footer from '../Components/Footer';
 const BlogSection = () => {
 
     return (
-        <div>
-            <TitleBar title="Blog" type="tiny"/>
+        <div className='MainContent'>
+            <TitleBar title="Blog" type="main" Content={"Dig into what we are talking about!!"}/>
 
         </div>
     );

@@ -1,12 +1,16 @@
 import React from "react"
 
 class Projects {
-    constructor()
+
+    constructor(Name,Type,Status)
     {
-        this.ProjectName = '';
-        this.ProjectType = '';
-        this.ProjectStatus = '';
         
+        this.ProjectName = Name;
+        this.ProjectType = Type;
+        this.ProjectStatus = Status;
+
     }
+
+
 }
 export default Projects

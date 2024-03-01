@@ -3,6 +3,10 @@ import '..//App.css';
 import TitleBar from '../Components/TitleBar';
 import Projects from '../JS/Projects';
 
+
+
+
+
 const ProjectSection = () => {
 
 
@@ -10,37 +14,57 @@ const ProjectSection = () => {
     const [ShowCurrent,SetShowCurrent] = useState(false)
     const [ShowCompleted,SetShowCompleted] = useState(false)
     const [InprogressArray,SetInProgressArray] = useState([]);
-    const [CurrenArray,SetCurrentArray] = useState([]);
+    const [CurrentArray,SetCurrentArray] = useState([]);
     const [CompletedArray,SetCompletedArray] = useState([]);
 
 
 
-
-
     const ShowAllInProgress = () =>{
-        SetShowInProgress(!ShowInProgress);
+        if(InprogressArray.length > 0)
+        {
+            SetShowInProgress(!ShowInProgress);
+        }
     }
 
     const ShowAllCurrent = () =>{
-        SetShowCurrent(!ShowCurrent);
+        if(CurrentArray.length > 0)
+        {
+            SetShowCurrent(!ShowCurrent);
+        }
     }
 
     const ShowAllCompleted = () =>{
-        SetShowCompleted(!ShowCompleted);
+        if(CompletedArray.length > 0)
+        {
+            SetShowCompleted(!ShowCompleted);
+        }
     }
+
+
 
 
     return (
         <>
-            <div>
-                <TitleBar title="In Progress" type="tiny" onClick={ShowAllInProgress}/>
-                {ShowInProgress &&<h2>Here</h2>}
-                <div style={{paddingLeft:'20px'}}>
+            <div className='MainContent'>
+                <TitleBar title="Projects" type="main" Content={"See what's being cooked up next"}/>
+
+                {/* <TitleBar title="In Progress" type="tiny" onClick={ShowAllInProgress}/>
+                {ShowInProgress &&
+                        InprogressArray.map((project,inx) =>(
+                            <h2 key={inx}>{project}</h2>
+                        ))}
+                <div>
                     <TitleBar title="Current" type="tiny" onClick={ShowAllCurrent}/>
-                    {ShowCurrent &&<h2>Here</h2>}
+                    {ShowCurrent &&
+                        CurrentArray.map((project,inx) =>(
+                            <h2 key={inx}>{project}</h2>
+                        ))}
                     <TitleBar title="Completed" type="tiny" onClick={ShowAllCompleted}/>
-                    {ShowCompleted &&<h2>Here</h2>}
-                </div>
+                    {ShowCompleted  &&
+                        CompletedArray.map((project,inx) =>(
+                            <h2 key={inx}>{project}</h2>
+                        ))}
+                </div> */}
             </div>
             
         </>

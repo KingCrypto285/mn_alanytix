@@ -13,6 +13,10 @@
   }
 }
 
+
+/* animation: colorTransition 5s infinite; /* 5s animation duration, repeats infinitely 
+transition: background-color 2s ease; Transition for smooth color change */
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -39,13 +43,13 @@
 
 @keyframes colorTransition {
   0% {
-    background-color: red;
+    background-color: #E07A5F;
   }
   50% {
-    background-color: blue;
+    background-color: #E07F7F;
   }
   100% {
-    background-color: red;
+    background-color: #E07A5F;
   }
 }
 
@@ -55,8 +59,10 @@
   flex-direction: column;
   text-align: left;
   justify-content: center;
-  animation: colorTransition 5s infinite; /* 5s animation duration, repeats infinitely */
-  transition: background-color 2s ease; /* Transition for smooth color change */
+  background-color: #E07A5F;
+  /* animation: colorTransition 5s infinite; 5s animation duration, repeats infinitely */
+  /* transition: background-color 2s ease; Transition for smooth color change */
+
 }
 
 
@@ -76,9 +82,8 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Poppins', sans-serif;
-  /*background-color: #ffffff;*/
-  animation: colorTransition 5s infinite; /* 5s animation duration, repeats infinitely */
-  transition: background-color 2s ease; /* Transition for smooth color change */
+  background-color: #E07A5F;
+
 }
 
 .container {

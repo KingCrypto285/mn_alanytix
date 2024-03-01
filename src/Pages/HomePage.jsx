@@ -11,7 +11,7 @@ import styled, { keyframes } from "styled-components";
 
 
         <div className='MainContent'>
-                <TitleBar title="Analytixs NZ" type="main"/>
+                <TitleBar title="Analytixs NZ" type="main" Content={"Dive into a new way to view data"}/>
                 {/* <TitleBar title="Experience Data Analytics in a Whole New Light!" type="sub"/> */}
         </div>
 
@@ -19,26 +19,4 @@ import styled, { keyframes } from "styled-components";
 
     )
 };
-const MainContent = styled.div`
-display: flex;
-height: 90vh;
-flex-direction: column;
-text-align: left;
-justify-content: center;
-
-
-`;
-
-const colorTransition = keyframes`
-  0% {
-    background-color: red;
-  }
-  50% {
-    background-color: blue;
-  }
-  100% {
-    background-color: red;
-  }
-`;
-
  export default Home;

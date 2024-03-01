@@ -5,10 +5,15 @@ import { render } from '@testing-library/react';
 
 
 
-const TitleBar = ({title,type,onClick }) => {
+const TitleBar = ({title,type,onClick,Content }) => {
 
     return(
-      <TitleBarBlock  onClick={onClick } > <h2 className={type}>{title}</h2></TitleBarBlock>
+      <>
+      <TitleBarBlock  onClick={onClick } > 
+        <h2 className={type}>{title}</h2>
+        </TitleBarBlock>
+        <p>{Content}</p>
+        </>
     );
 
 }
@@ -22,7 +27,6 @@ gap: 16px;
 padding-top: 25px;
 margin: 0 auto;
 border-bottom: 3px solid black; 
-
 
 
 
