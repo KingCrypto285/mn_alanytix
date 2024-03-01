@@ -10,7 +10,7 @@ const ReportSection = () => {
 
     return (
         <>
-        <TitleBar title="Reports" type="main"/>
+        <TitleBar title="Reports" type="tiny"/>
         </>
     );
 }

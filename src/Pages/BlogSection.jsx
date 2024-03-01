@@ -8,7 +8,7 @@ const BlogSection = () => {
 
     return (
         <div>
-            <h1>Hello</h1>
+            <TitleBar title="Blog" type="tiny"/>
 
         </div>
     );
