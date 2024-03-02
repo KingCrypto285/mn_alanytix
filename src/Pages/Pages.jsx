@@ -7,6 +7,7 @@ import ProjectSection from './ProjectSection';
 import Navbar from '../Components/Navbar';
 import Footer from '../Components/Footer';
 import ReportSection from './ReportSection';
+import Reports from './Reports';
 import About from './About';
 import Contact from './Contact';
 
@@ -18,10 +19,11 @@ function Pages() {
         <div >
             <Navbar/>
                 <Routes>
-                    <Route path="/" element={<Home />}/>
+                    <Route path="/HomePage" element={<Home />}/>
                     <Route path="/BlogSection" element={<BlogSection />}/>
                     <Route path="/ProjectSection" element={<ProjectSection />}/>   
-                    <Route path="/ReportSection" element={<ReportSection />}/> 
+                    <Route path="/ReportSection" element={<ReportSection />}/>  
+                    <Route path="/Reports" element={<Reports />}/>  
                     <Route path="/About" element={<About />}/>          
                     <Route path="/Contact" element={<Contact />}/>      
                 </Routes> 
