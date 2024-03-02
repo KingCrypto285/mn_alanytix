@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/mn_alanytix/static/css/main.ad17c6fd.css",
+    "main.js": "/mn_alanytix/static/js/main.c69e0da2.js",
+    "static/js/453.af3997f8.chunk.js": "/mn_alanytix/static/js/453.af3997f8.chunk.js",
+    "index.html": "/mn_alanytix/index.html",
+    "main.ad17c6fd.css.map": "/mn_alanytix/static/css/main.ad17c6fd.css.map",
+    "main.c69e0da2.js.map": "/mn_alanytix/static/js/main.c69e0da2.js.map",
+    "453.af3997f8.chunk.js.map": "/mn_alanytix/static/js/453.af3997f8.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ad17c6fd.css",
+    "static/js/main.c69e0da2.js"
+  ]
+}
