@@ -12,11 +12,18 @@ const TitleBar = ({title,type,onClick,Content }) => {
       <TitleBarBlock  onClick={onClick } > 
         <h2 className={type}>{title}</h2>
         </TitleBarBlock>
-        <p>{Content}</p>
+        <Description>{Content}</Description>
         </>
     );
 
 }
+
+const Description = styled.p`
+margin: 0 auto;
+font-size: 40px;
+font-family: Georgia;
+padding-top: 25px;
+`
 
 const TitleBarBlock = styled.div`
 font-family: Georgia;
@@ -36,15 +43,15 @@ border-bottom: 3px solid black;
   font-size: 75px;
   text-align:left;
 }
-.sub{
-  font-size: 50px;
-  text-align:center;
-}
+// .sub{
+//   font-size: 50px;
+//   text-align:center;
+// }
 
-.tiny{
-  font-size: 25px;
-  text-align:left;
-}
+// .tiny{
+//   font-size: 25px;
+//   text-align:left;
+// }
 
 `
 ;
