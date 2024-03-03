@@ -8,6 +8,7 @@ import ReportSection from "../Pages/ReportSection";
 import ProjectSection from "../Pages/ProjectSection";
 import About from "../Pages/About";
 import Contact from "../Pages/Contact";
+import logo from "../Images/logo.png"
 
 const Navbar = () => {
 
@@ -23,7 +24,10 @@ const Navbar = () => {
         <nav className="navbar">
         <div className="container">
           <div>
-          <Link to="/" className="heading-link">Analytixs NZ</Link>
+            <a>
+            <img alt="logo" src={logo} style={{width:"25px", height:"25px"}}></img>
+            </a>
+          <Link to="/" className="heading-link">IndataStar</Link>
           </div>
           <div className="nav-elements">
             <ul>

@@ -1,12 +1,12 @@
 import React from "react";
+import "../../App.css";
 
 const Reports = () => {
 
 
     return (
-        <>
-        <h1>Hello</h1>
-        </>
+        <div className="MainContent">
+        </div>
     );
 }
 export default Reports;
