@@ -22,6 +22,7 @@ const Description = styled.p`
 margin: 0 auto;
 font-size: 40px;
 font-family: Georgia;
+color:white;
 padding-top: 25px;
 `
 
@@ -40,6 +41,7 @@ border-bottom: 3px solid black;
 
 
 .main{
+  color:white;
   font-size: 75px;
   text-align:left;
 }
