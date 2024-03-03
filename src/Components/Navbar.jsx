@@ -24,9 +24,6 @@ const Navbar = () => {
         <nav className="navbar">
         <div className="container">
           <div>
-            <a>
-            <img alt="logo" src={logo} style={{width:"25px", height:"25px"}}></img>
-            </a>
           <Link to="/" className="heading-link">IndataStar</Link>
           </div>
           <div className="nav-elements">

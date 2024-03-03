@@ -14,8 +14,7 @@ import Contact from './Contact';
 
         <div className='MainContent'>
                 <TitleBar title="IndataStar" type="main" Content={"Dive into a new way to view data"}/>
-                {/* <BlogSection/>
-                <ProjectSection/> */}
+
         </div>
 
     )

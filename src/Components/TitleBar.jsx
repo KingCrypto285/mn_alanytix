@@ -24,7 +24,7 @@ const TitleBar = ({title,type,onClick,Content }) => {
 const Description = styled.p`
 margin: 0 auto;
 font-size: 40px;
-font-family:  Poppins, sans-serif;
+
 padding-top: 25px;
 color:white;
 `
@@ -44,6 +44,7 @@ border-bottom: 3px solid black;
 
 
 .main{
+  color:white;
   font-size: 75px;
   text-align:left;
   color:white;
