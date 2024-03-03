@@ -9,13 +9,14 @@ import { render } from '@testing-library/react';
 const TitleBar = ({title,type,onClick,Content }) => {
 
     return(
-      <>
 
+      <>
       <TitleBarBlock  onClick={onClick } >
         <h2 className={type}>{title}</h2>
         </TitleBarBlock>
         <Description>{Content}</Description>
         </>
+        
     );
 
 }

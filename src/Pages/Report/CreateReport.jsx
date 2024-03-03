@@ -1,41 +1,45 @@
 import {React,useState} from "react";
 import "../../App.css";
 import { PDFDocument, StandardFonts, rgb } from 'pdf-lib'
-import { Page, Text, View, Document, StyleSheet  } from '@react-pdf/renderer';
+import {  Text, View, Document, StyleSheet  } from '@react-pdf/renderer';
 import styled from "styled-components";
-
-function CreateReport() {
-
-    const [PDF,SetPDF] = useState(null)
-
+import * as pdfjs from 'pdfjs-dist';
+import { initializeApp } from "firebase/app";
+import {getAuth} from "firebase/auth";
 
 
 
 
-    return(
-            <div>
-            </div>
-    )
+const CreateReport = () => {
 
+    const [pdf, setPdf] = useState(null);
 
+    return (
+        <>
+        <h1>Create your own report...</h1>
+        <MenuBox>
+            
+        </MenuBox>
+        </>
+    );
+  };
+  
+
+const MenuBox = styled.div`
+background-color: #ffffff;
+width:90%;
+height:50%;
+margin: auto;
+border-radius: 5px;
+h1{
+    font-family:  Poppins, sans-serif;
+    color: #E07A5F;
+    font-size: 50px;
 }
+`
+
 
 export default CreateReport;
 
 
 
-{/* <input type="file"/>
-<button onClick={NewDoc}>New</button>
-<div style={{ width: '100%', height: '500px' }}>
-<Document>
-<Page size="A4" style={styles.page}>
-<View style={styles.section}>
-<Text>Section #1</Text>
-</View>
-<View style={styles.section}>
-<Text>Section #2</Text>
-</View>
-</Page>
-</Document>
-{!PDF && <p>No Preview available.</p>}
-</div> */}
