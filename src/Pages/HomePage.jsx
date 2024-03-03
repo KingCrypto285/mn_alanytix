@@ -11,7 +11,7 @@ import styled, { keyframes } from "styled-components";
 
 
         <div className='MainContent'>
-                <TitleBar title="Analytixs NZ" type="main" Content={"Dive into a new way to view data"}/>
+                <TitleBar title="IndataStar" type="main" Content={"Dive into a new way to view data"}/>
                 {/* <TitleBar title="Experience Data Analytics in a Whole New Light!" type="sub"/> */}
         </div>
 

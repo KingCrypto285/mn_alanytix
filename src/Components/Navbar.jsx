@@ -23,7 +23,7 @@ const Navbar = () => {
         <nav className="navbar">
         <div className="container">
           <div>
-          <Link to="/" className="heading-link">Analytixs NZ</Link>
+          <Link to="/" className="heading-link">IndataStar</Link>
           </div>
           <div className="nav-elements">
             <ul>
