@@ -19,7 +19,7 @@ function Pages() {
         <div >
             <Navbar/>
                 <Routes>
-                    <Route path="/HomePage" element={<Home />}/>
+                    <Route path="/" element={<Home />}/>
                     <Route path="/BlogSection" element={<BlogSection />}/>
                     <Route path="/ProjectSection" element={<ProjectSection />}/>   
                     <Route path="/ReportSection" element={<ReportSection />}/>  

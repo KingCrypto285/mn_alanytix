@@ -13,7 +13,6 @@ class App extends Component {
       <BrowserRouter>
         <Pages />
       </BrowserRouter>
-      <Home/>
       </>
   );}
 }
