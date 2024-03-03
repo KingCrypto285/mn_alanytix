@@ -8,6 +8,7 @@ import ReportSection from "../Pages/ReportSection";
 import ProjectSection from "../Pages/ProjectSection";
 import About from "../Pages/About";
 import Contact from "../Pages/Contact";
+import logo from "../Images/logo.png"
 
 const Navbar = () => {
 
