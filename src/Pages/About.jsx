@@ -8,7 +8,7 @@ function About() {
   
     return (
         <>
-            <div className='MainContent'>
+            <div>
                 
             </div>
         </>
