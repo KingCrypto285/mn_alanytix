@@ -16,10 +16,6 @@ class ReportSection extends React.Component {
         return (
             <div className='MainContent'>
             <TitleBar title="Reports" type="main" Content={"Generate and investigate"}/>           
-            <div>
-                <h1>hello</h1>
-            <Link to="/Reports"></Link>
-            </div>
             </div>
         );
     }
