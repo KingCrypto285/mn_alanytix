@@ -9,13 +9,9 @@ import styled, { keyframes } from "styled-components";
     return(
 
 
-
         <div className='MainContent'>
                 <TitleBar title="IndataStar" type="main" Content={"Dive into a new way to view data"}/>
-                {/* <TitleBar title="Experience Data Analytics in a Whole New Light!" type="sub"/> */}
         </div>
-
-
 
     )
 };

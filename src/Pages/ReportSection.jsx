@@ -2,23 +2,25 @@ import React from 'react';
 import '..//App.css';
 import styled from "styled-components";
 import { Link  } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import TitleBar from '../Components/TitleBar';
 import MainDescription from '../Components/MainDescription';
 
-class ReportSection extends React.Component {
+function ReportSection () {
+    let nav = useNavigate();
 
 
-
-    GoToReports =()=>{
-        this.props.history.push(`/Reports`);
+    const GoToReports =()=>{
+        nav(`/Reports/Reports`);
     }
-    render(){
+    
         return (
             <div className='MainContent'>
-            <TitleBar title="Reports" type="main" Content={"Generate and investigate"}/>           
+            <TitleBar title="Reports" type="main" Content={"Generate and investigate"}/>     
+            <button onClick={GoToReports}>Go To Reports</button>      
             </div>
         );
-    }
+    
 
 }
 
