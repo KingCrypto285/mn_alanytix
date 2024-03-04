@@ -5,6 +5,8 @@ import TitleBar from '../Components/TitleBar';
 import Footer from '../Components/Footer';
 import styled, { keyframes } from "styled-components";
 
+
+
  function Home() {
     return(
 
