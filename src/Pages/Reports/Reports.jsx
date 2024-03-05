@@ -1,22 +1,27 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "../../App.css"
 import { PDFDocument } from "pdf-lib";
 import { Document, Page, pdfjs } from 'react-pdf';
+import styled from "styled-components";
+
 const Reports = () => {
     const [newPDF,SetnewPDF] = useState('');
-   
+    
+
+    // useEffect(() =>{
+    //     StartUpPdf();
+    // });
 
     // Create an iframe element
     // const iframe = document.createElement('iframe');
     // pdfContainer.appendChild(iframe);
-    const go  =async ()=>{
+    //URL.createObjectURL(newPDF)
+    const StartUpPdf  =async ()=>{
 
         console.log('create pdf');
         const pdf = await PDFDocument.create();
         const page = pdf.addPage()
-        page.drawText('You can create PDFs!')
         const pdfBytes = await pdf.save()
-        // Convert the byte array to a Blob
         const pdfBlob = new Blob([pdfBytes], { type: 'application/pdf' });
         SetnewPDF(pdfBlob)
 
@@ -53,8 +58,7 @@ const Reports = () => {
 
         // Set attributes for the iframe
         iframe.src = pdfDataURL;
-        iframe.width = '100%';
-        iframe.height = '500px'; // You may adjust the height as needed
+        // You may adjust the height as needed
 
         // Append the iframe to the container
         pdfContainer.appendChild(iframe);
@@ -64,29 +68,30 @@ const Reports = () => {
             alert('A')
         }
     }
-
-
-
-
-
-{/* <Document file={{
-            data: uint8Arr <----
-        }} onLoadSuccess={() => console.log('SUCCESS LOAD')}>
-            <Page pageNumber={1} />
-        </Document> */}
+  
 
 
     return (
         <>
-        <button style={{height:'10%',width:'20%'}} onClick={go}>oner</button>
-        
-        <button style={{height:'10%',width:'20%'}} onClick={go2}>twofer</button>        
-        <div>
 
-        <div id="pdfContainer">
-        </div>
-        </div>
+        <Toolbox>
+                <h1>H</h1>
+            <button style={{height:'10%',width:'20%'}} onClick={go2}>twofer</button>     
+        </Toolbox>
+
         </>
     );
 }
+
+const Toolbox = styled.div`
+background-color:white;
+width:90%;
+margin: auto;
+
+`
+
+const PDFViewer = styled.iframe`
+iframe.width  : 100%;
+iframe.height : 500px
+`
 export default Reports;
