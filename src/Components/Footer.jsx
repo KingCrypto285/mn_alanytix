@@ -20,7 +20,7 @@ const BottomBar = styled.div`
     flex-direction: row; 
     align-items: center;
     width: 100%;
-    height: 5%;
+    height: 5vh;
     position: fixed; 
     bottom: 0;
     color: #ffffff;

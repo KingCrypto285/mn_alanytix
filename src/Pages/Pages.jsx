@@ -10,6 +10,7 @@ import ReportSection from './ReportSection';
 import Reports from './Reports';
 import About from './About';
 import Contact from './Contact';
+import Create_Report from './Reports/Create_Report';
 
 function Pages() {
 
@@ -24,6 +25,7 @@ function Pages() {
                     <Route path="/ProjectSection" element={<ProjectSection />}/>   
                     <Route path="/ReportSection" element={<ReportSection />}/>  
                     <Route path="/Reports" element={<Reports />}/>  
+                    <Route path="/Reports/Create_Report" element={<Create_Report />}/>  
                     <Route path="/About" element={<About />}/>          
                     <Route path="/Contact" element={<Contact />}/>      
                 </Routes> 
