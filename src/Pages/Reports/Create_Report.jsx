@@ -4,12 +4,16 @@ import Draggable from 'react-draggable';
 import { PDFDocument,StandardFonts  } from "pdf-lib";
 import { FaAd,FaCog } from "react-icons/fa";
 import styled from "styled-components";
-
+import DraggableBox from "../../Components/DraggableBox";
 
 
 const Create_Report =()=>{
     const [PDF,SetPDF] = useState('')
+    const [DesignArray,setDesignArray] = useState([]);
 
+    const GenerateBox = ()=>{
+        alert('Works');
+    }
 
     useEffect(() =>{
         SetUpPDFOnLoad();
@@ -32,9 +36,9 @@ const Create_Report =()=>{
     async function LoadPDF()
     {
         const PDF_LOAD = await PDFDocument.load(PDF);
-        const viewerPrefs = PDF_LOAD.catalog.getOrCreateViewerPreferences();
-        viewerPrefs.setDisplayDocTitle(true);
-        viewerPrefs.setFitWindow(true);
+        // const viewerPrefs = PDF_LOAD.catalog.getOrCreateViewerPreferences();
+        // viewerPrefs.setDisplayDocTitle(true);
+        // viewerPrefs.setFitWindow(true);
 
 
     }
@@ -54,21 +58,20 @@ const Create_Report =()=>{
                     <Sidebar style={{height:'90vh',width:'5vh', backgroundColor:'white'}}>
                         <Menu>
                         <UnderlinedSub title="Settings" icon={<FaCog />}>
-                        <MenuItem>General</MenuItem>
-                        <MenuItem>Security</MenuItem>
+                        <MenuItem onClick={GenerateBox}>Text</MenuItem>
+                        <MenuItem>Image</MenuItem>
+                        <MenuItem>Theme</MenuItem>
+                        <MenuItem>Table</MenuItem>
                         </UnderlinedSub>
                         </Menu>
                     </Sidebar>
                 </div>
                 <DivObj>
+                    <button onClick={LoadPDF}>Go</button>
+
                     <iframe src={PDF} style={{height:'100%',width:'100%'}}></iframe>
+
                 </DivObj>
-                <div>
-                <Sidebar style={{height:'90vh',width:'5vh', backgroundColor:'white'}}>
-
-                </Sidebar>                  
-                </div>
-
             </MainDiv>
         );
     
