@@ -20,6 +20,11 @@ const Create_Report =()=>{
         //LoadPDF();
     },[])
 
+    async function LoadPDF()
+    {
+        const PDF_LOAD = await PDFDocument.load(PDF);
+    }
+
     async function SetUpPDFOnLoad()
     {
         const NewPDF = await PDFDocument.create()
@@ -33,22 +38,34 @@ const Create_Report =()=>{
         SetTOUrl(PDFBytes);
     }
 
-    async function LoadPDF()
-    {
-        const PDF_LOAD = await PDFDocument.load(PDF);
-        // const viewerPrefs = PDF_LOAD.catalog.getOrCreateViewerPreferences();
-        // viewerPrefs.setDisplayDocTitle(true);
-        // viewerPrefs.setFitWindow(true);
-
-
-    }
-
-
     const SetTOUrl = (PDFInput) =>
     {
         const BLOB = new Blob([PDFInput], { type: 'application/pdf' });
         const PDF_URL = URL.createObjectURL(BLOB);
         SetPDF(PDF_URL)
+    }
+
+    async function GetUnitArray() 
+    {
+        const resp = await fetch(PDF);
+        const Arraybuffer = await resp.arrayBuffer();
+        const unit = new Uint8Array(Arraybuffer);
+        return unit;
+    }
+
+    async function LoadPDF()
+    {
+        const resp = await fetch(PDF);
+        const Arraybuffer = await resp.arrayBuffer();
+        const unit = new Uint8Array(Arraybuffer);
+        const PDF_LOAD = await PDFDocument.load(unit);
+        const pges = PDF_LOAD.getPages()
+        const First = pges[0]
+        const txt = 'Here';
+        First.drawText(txt,{x:50,y:50})
+
+        const PDFBytes = await PDF_LOAD.save();
+        SetTOUrl(PDFBytes);
     }
 
 
@@ -77,6 +94,11 @@ const Create_Report =()=>{
     
 
 }
+
+
+        // const viewerPrefs = PDF_LOAD.catalog.getOrCreateViewerPreferences();
+        // viewerPrefs.setDisplayDocTitle(true);
+        // viewerPrefs.setFitWindow(true);
 
 
 const UnderlinedSub = styled(SubMenu)`
