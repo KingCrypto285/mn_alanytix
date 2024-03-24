@@ -6,11 +6,11 @@ const Footer = () => {
 
     return(
         <BottomBar>
-            <h5 style={{margin:'auto'}}>Analytixs</h5>
+            <h5 style={{margin:'auto'}}>Indatastar</h5>
             <VerticalBreak/>
-            <h5 style={{margin:'auto'}}>Analytixs</h5>
+            <h5 style={{margin:'auto'}}>Indatastar</h5>
             <VerticalBreak/>
-            <h5 style={{margin:'auto'}}>Analytixs</h5>
+            <h5 style={{margin:'auto'}}>Indatastar</h5>
         </BottomBar>
     );
 }

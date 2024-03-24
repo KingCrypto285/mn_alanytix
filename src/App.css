@@ -13,6 +13,23 @@
   }
 }
 
+/* Define keyframes for fade-in effect */
+@keyframes fadeIn {
+  from {
+    opacity: 0; /* Start with opacity 0 (fully transparent) */
+  }
+  to {
+    opacity: 1; /* Transition to opacity 1 (fully opaque) */
+  }
+}
+
+/* Apply fade-in animation to an element */
+.fadeIn {
+  animation: fadeIn 0.5s ease-in-out; /* Use fadeIn animation with 0.5s duration and ease-in-out timing function */
+}
+
+
+
 
 /* animation: colorTransition 5s infinite; /* 5s animation duration, repeats infinitely 
 transition: background-color 2s ease; Transition for smooth color change */
@@ -60,9 +77,8 @@ transition: background-color 2s ease; Transition for smooth color change */
   text-align: left;
   justify-content: center;
   background-color: #E07A5F;
-  /* animation: colorTransition 5s infinite; 5s animation duration, repeats infinitely */
-  /* transition: background-color 2s ease; Transition for smooth color change */
-
+  opacity: 0; /* Start with opacity 0 (fully transparent) */
+  animation: fadeIn 0.5s ease-in-out forwards;
 }
 
 
@@ -70,7 +86,7 @@ transition: background-color 2s ease; Transition for smooth color change */
   display: inline-block;
   font-size: 24px; /* Adjust the font size as needed */
   font-weight: bold;
-  text-align: le;
+  text-align: left;
   color: white; /* Use the default text color */
   text-decoration: none; /* Remove default underline */
   /* Add any additional styles to match your desired heading appearance */

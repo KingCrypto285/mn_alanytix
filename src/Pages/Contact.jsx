@@ -7,11 +7,11 @@ function Contact() {
 
   
     return (
-        <>
-        <div className='MainContent'>
-
+        <div>
+        <h1 style={{  color:'white',fontSize: '75px',fontFamily: 'Poppins, sans-serif', margin:'auto', display:'flex',flexDirection:'center',
+    }}>Contact Us</h1>
         </div>
-        </>
     );
 }
+
 export default Contact;
