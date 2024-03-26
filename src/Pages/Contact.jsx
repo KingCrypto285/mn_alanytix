@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from "styled-components";
 import '../App.css';
 import TitleBar from '../Components/TitleBar';
@@ -6,64 +6,85 @@ import ContactDetails from '../JS/ContactDetails';
 
 function Contact() {
     const [contactDetail,SetContactDetail] = useState(new ContactDetails());
+    const [Sentcontact,SetSentContact] = useState(false)
 
+    const handleInputChange = (e) =>{
+
+    }
+
+    const handleSubmit = (e)=>{
+        e.preventDefault();
+        SetSentContact(true)
+    }
 
   
     return (
-        <FormDiv>
-            <h1>Contact Us:</h1>
-            <form action="#">
-                <TestDiv>
-                <label for="Firstname">First Name:</label>
-                <br/>
-                <input 
-                type="text" 
-                name="firstname" 
-                required/>
-                </TestDiv>
-                <TestDiv>
-                <label for="Lastname">Last Name:</label>
-                <br/>
-                <input 
-                type="text" 
-                name="lastname" 
-                required/>
-                </TestDiv>
-                <TestDiv>
-                <label for="Email">Email:</label>
-                <br/>
-                <input 
-                type="text" 
-                name="email" 
-                required/>
-                </TestDiv>
-                <TestDiv>
-                <label for="Company">Company:</label>
-                <br/>
-                <input 
-                type="text" 
-                name="company" 
-                required/>
-                </TestDiv>
-                <TestDiv>                
-                <label for="Message">Message:</label>
-                <br/>
-                <textarea 
-                type="text" 
-                name="message" 
-                required  rows={4} cols={40} />
-                </TestDiv>
-                <TestDiv>
-                <input type='submit' />
-                </TestDiv>
-            </form>
-        </FormDiv>
-
-
-        // <FormDiv>
-        // <FormTitle>Contact Us</FormTitle>
- 
-        // </FormDiv>
+        <>
+        {Sentcontact ? (
+            <>
+                <h2>Hello</h2>
+            </>
+        ):(
+              <FormDiv>
+              <h1>Contact Us:</h1>
+              <div>
+                <p>
+                    We want to continue to innovate, so get in touch about working with us on your next big project.
+                </p>
+              </div>
+              <form onSubmit={handleSubmit}>
+                  <TestDiv>
+                  <label for="Firstname">First Name:</label>
+                  <br/>
+                  <input 
+                  type="text" 
+                  name="firstname" 
+                  onChange={handleInputChange}
+                  required/>
+                  </TestDiv>
+                  <TestDiv>
+                  <label for="Lastname">Last Name:</label>
+                  <br/>
+                  <input 
+                  type="text" 
+                  onChange={handleInputChange}
+                  name="lastname" 
+                  required/>
+                  </TestDiv>
+                  <TestDiv>
+                  <label for="Email">Email:</label>
+                  <br/>
+                  <input 
+                  type="text" 
+                  onChange={handleInputChange}
+                  name="email" 
+                  required/>
+                  </TestDiv>
+                  <TestDiv>
+                  <label for="Company">Company:</label>
+                  <br/>
+                  <input 
+                  type="text" 
+                  onChange={handleInputChange}
+                  name="company" 
+                  required/>
+                  </TestDiv>
+                  <TestDiv>                
+                  <label for="Message">Message:</label>
+                  <br/>
+                  <textarea 
+                  type="text" 
+                  onChange={handleInputChange}
+                  name="message" 
+                  required  rows={4} cols={40} />
+                  </TestDiv>
+                  <TestDiv>
+                  <input type='submit' Value='Submit' />
+                  </TestDiv>
+              </form>
+          </FormDiv>
+        )}
+        </>
     );
 }
 
@@ -85,15 +106,21 @@ const TestDiv = styled.div`
         width:80%;
         padding:10px;
         border:none;
+        height:auto;
         outline:none;
         border-bottom: 2px solid #aaa;
         background-color:#f8f8f8;
         box-shadow:0 2px 5px rgb(0,0,0,0.1);
+        resize:vertical;
         transition: all 0.3s ease;
     }
 
     button{
 
+    }
+
+    form{
+        padding:16px;
     }
 `
 
@@ -123,6 +150,7 @@ const FormDiv = styled.div`
 margin:auto;
 max-width: 800px;
 background: #fff;
+height:100%;
 width: 800px;
 text-align: center;
 padding: 25px 40px 10px 40px;
